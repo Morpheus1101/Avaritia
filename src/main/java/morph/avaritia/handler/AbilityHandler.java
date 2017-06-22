@@ -31,6 +31,7 @@ public class AbilityHandler {
     public static final Set<String> entitiesWithChestplates = new HashSet<>();
     public static final Set<String> entitiesWithLeggings =    new HashSet<>();
     public static final Set<String> entitiesWithBoots =       new HashSet<>();
+    public static final Set<String> entitiesWithFlight =      new HashSet<>();
     //@formatter:on
 
     public static boolean isPlayerWearing(EntityLivingBase entity, EntityEquipmentSlot slot, Predicate<Item> predicate) {
@@ -139,14 +140,17 @@ public class AbilityHandler {
     }
 
     private static void handleChestplateStateChange(EntityLivingBase entity, boolean isNew) {
+    	String key = entity.getCachedUniqueIdString() + "|" + entity.worldObj.isRemote;
         if (entity instanceof EntityPlayer) {
             EntityPlayer player = ((EntityPlayer) entity);
             if (isNew) {
                 player.capabilities.allowFlying = true;
+                entitiesWithFlight.add(key);
             } else {
-                if (!player.capabilities.isCreativeMode && !player.capabilities.allowFlying) {
+                if (!player.capabilities.isCreativeMode && entitiesWithFlight.contains(key)) {
                     player.capabilities.allowFlying = false;
                     player.capabilities.isFlying = false;
+                    entitiesWithFlight.remove(key);
                 }
             }
         }
