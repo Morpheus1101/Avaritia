@@ -7,10 +7,6 @@
 	},
 	"ingredients": [
 		{
-			"type": "forge:ore_dict",
-			"ore": "blockEmerald"
-		},
-		{
 			"type": "minecraft:item",
 			"item": "#diamond_lattice"
 		},
@@ -190,7 +186,7 @@
 			],
 			"pass": {
 				"type": "forge:ore_dict",
-				"ore": "blockEnderium"
+				"ore": "enderium_singularity"
 			}
 		},
 		{
