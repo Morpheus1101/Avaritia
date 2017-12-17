@@ -186,7 +186,7 @@
 			],
 			"pass": {
 				"type": "forge:ore_dict",
-				"ore": "blockEnderium"
+				"ore": "enderium_singularity"
 			}
 		},
 		{

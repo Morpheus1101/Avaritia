@@ -82,6 +82,7 @@ public class ModItems {
     public static ItemStack fluxedSingularity;
     public static ItemStack platinumSingularity;
     public static ItemStack iridiumSingularity;
+    public static ItemStack enderiumSingularity;
 
     public static ItemStack diamond_lattice;
     public static ItemStack crystal_matrix_ingot;
@@ -128,6 +129,7 @@ public class ModItems {
         fluxedSingularity = singularity.registerItem("fluxed");
         platinumSingularity = singularity.registerItem("platinum");
         iridiumSingularity = singularity.registerItem("iridium");
+        enderiumSingularity = singularity.registerItem("enderium");
 
         infinity_sword = registerItem(new ItemSwordInfinity());
 
