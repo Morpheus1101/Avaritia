@@ -7,10 +7,6 @@
 	},
 	"ingredients": [
 		{
-			"type": "forge:ore_dict",
-			"ore": "blockEmerald"
-		},
-		{
 			"type": "minecraft:item",
 			"item": "#diamond_lattice"
 		},
