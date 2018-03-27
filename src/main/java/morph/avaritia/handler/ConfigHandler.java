@@ -182,6 +182,7 @@ public class ConfigHandler {
         comment = "Added to the existing multiplier to make prices more expensive or cheaper. Can be negative.";
         langKey = "avaritia:config.balance.multiplier";
 
+        prop = config.get(category, "Cost Multiplier", 0);
         prop.setComment(comment);
         prop.setLanguageKey(langKey);
         prop.setRequiresMcRestart(true);
