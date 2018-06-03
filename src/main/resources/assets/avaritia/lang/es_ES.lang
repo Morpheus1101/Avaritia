@@ -41,10 +41,10 @@ item.avaritia:infinity_hoe.name=Azada de la Tierra Verde
 item.avaritia:skullfire_sword.name=Espada de Calavera
 #
 # Armor
-item.avaritia:infinity_helmet.name=Casco Infinito
-item.avaritia:infinity_chestplate.name=Peto Infinito
-item.avaritia:infinity_pants.name=Grebas Infinitas
-item.avaritia:infinity_boots.name=Botas Infinitas
+item.avaritia:infinity_helmet.name=Casco de Infinito
+item.avaritia:infinity_chestplate.name=Peto de Infinito
+item.avaritia:infinity_pants.name=Grebas de Infinito
+item.avaritia:infinity_boots.name=Botas de Infinito
 #
 # Misc
 item.avaritia:endest_pearl.name=Endest Pearl
@@ -67,7 +67,7 @@ tile.avaritia:extreme_crafting_table.name=Mesa de Trabajo Extrema
 #
 # Resource
 tile.avaritia:block_resource.neutronium.name.name=Bloque de Neutronio
-tile.avaritia:block_resource.infinity.name.name=Bloque Infinito
+tile.avaritia:block_resource.infinity.name.name=Bloque de Infinito
 tile.avaritia:block_resource.crystal_matrix.name.name=Matriz de Cristal
 #
 # Machines
