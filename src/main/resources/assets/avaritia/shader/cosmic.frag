@@ -1,4 +1,4 @@
-#version 130
+#version 120
 
 #define M_PI 3.1415926535897932384626433832795
 
@@ -20,6 +20,10 @@ uniform float opacity;
 uniform mat2 cosmicuvs[cosmiccount];
 
 varying vec3 position;
+
+float rand2d(vec2 x) {
+    return fract(sin(dot(x, vec2(12.9898, 78.233))) * 43758.5453123);
+}
 
 mat4 rotationMatrix(vec3 axis, float angle)
 {
@@ -101,8 +105,7 @@ void main (void)
 		int tv = int(mod(floor(v*uvtiles),uvtiles)); 
 		
 		// get pseudorandom variants
-		int position = ((1777541 * tu) + (7649689 * tv) + (3612703 * (i+31)) + 1723609 ) ^ 50943779;
-		int symbol = int(mod(position, cosmicoutof));
+		int symbol = int(rand2d(vec2(tu, tv + i * 10.0)) * cosmicoutof);
 		int rotation = int(mod(pow(tu,float(tv)) + tu + 3 + tv*i, 8));
 		bool flip = false;
 		if (rotation >= 4) {
