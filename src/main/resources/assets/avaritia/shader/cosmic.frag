@@ -22,7 +22,7 @@ uniform mat2 cosmicuvs[cosmiccount];
 varying vec3 position;
 
 float rand2d(vec2 x) {
-    return fract(sin(dot(x, vec2(12.9898, 78.233))) * 43758.5453123);
+    return fract(sin(mod(dot(x, vec2(12.9898, 78.233)), 3.14)) * 43758.5453);
 }
 
 mat4 rotationMatrix(vec3 axis, float angle)
